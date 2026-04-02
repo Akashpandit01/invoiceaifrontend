@@ -10,7 +10,7 @@ function App() {
   const [showAnalytics, setShowAnalytics] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
-  const API = "http://127.0.0.1:8000";
+  const API = "https://invoiceaibackend.onrender.com";
 
   const fetchInvoices = async () => {
     const res = await fetch(`${API}/invoices`);
