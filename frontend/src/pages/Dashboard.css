@@ -1,0 +1,230 @@
+/* ===== BASE ===== */
+.dashboard {
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a, #020617);
+}
+
+/* DARK MODE */
+.dashboard.dark {
+  background: linear-gradient(135deg, #020617, #0f172a, #020617);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 15px 20px;
+  border-radius: 12px;
+}
+
+.navbar h2 {
+  font-size: 20px;
+}
+
+.navActions {
+  display: flex;
+  gap: 10px;
+}
+
+.navActions button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.logoutBtn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* ===== TITLE ===== */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== SEARCH ===== */
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+/* ===== BUTTON ===== */
+.button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  cursor: pointer;
+}
+
+.centerBtn {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.analyticsCard {
+  text-align: center;
+  margin-bottom: 30px; /* 🔥 adds gap */
+}
+
+.uploadCard {
+  margin-bottom: 30px;
+}
+
+.uploadCard input {
+  margin: 10px 0;
+}
+
+
+.analyticsCard,
+.uploadCard {
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+}
+/* ===== TABLE ===== */
+.tableSection {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.table th {
+  background: rgba(255,255,255,0.1);
+}
+
+.table tr {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.table tr:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* ===== IMAGE ACTION ===== */
+.actionImg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+/* ===== DELETE BUTTON ===== */
+.deleteBtn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modalImg {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* ===== THEME BUTTON ===== */
+.themeToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .table {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchInput {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .navActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navActions button {
+    width: 100%;
+  }
+}

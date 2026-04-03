@@ -146,7 +146,70 @@ body {
   background: #f1f1f1;
   color: #000;
 }
+body {
+  margin: 0;
+  font-family: "Segoe UI";
+  background: #0f172a;
+  color: white;
+}
 
+.landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing h1 {
+  font-size: 3rem;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.auth {
+  width: 300px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.dashboard {
+  padding: 30px;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.previewImg {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+}
+td, th {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .card {
@@ -163,3 +226,4 @@ body {
     height: 40px;
   }
 }
+

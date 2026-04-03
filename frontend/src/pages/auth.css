@@ -1,0 +1,145 @@
+/* ================= AUTH PAGE ================= */
+
+.auth {
+  height: 100vh;
+  background: radial-gradient(circle at 20% 30%, #1e3a8a, transparent 40%),
+              radial-gradient(circle at 80% 70%, #9333ea, transparent 40%),
+              linear-gradient(135deg, #020617, #0f172a, #020617);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow effect */
+.auth::before,
+.auth::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  filter: blur(120px);
+  opacity: 0.4;
+}
+
+.auth::before {
+  background: #3b82f6;
+  top: -100px;
+  left: -100px;
+}
+
+.auth::after {
+  background: #a855f7;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* ================= CARD ================= */
+
+.auth h2,
+.auth input,
+.auth button {
+  z-index: 1;
+}
+
+.auth {
+  padding: 30px;
+}
+
+/* Create card effect */
+.auth > * {
+  max-width: 350px;
+  width: 100%;
+}
+
+/* Glass card wrapper effect */
+.auth {
+  gap: 12px;
+}
+
+.auth h2 {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  padding: 20px;
+  border-radius: 16px 16px 0 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 0;
+}
+
+/* Inputs container feel */
+.auth input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* First input top rounded */
+.auth input:first-of-type {
+  border-radius: 0;
+}
+
+/* Last input */
+.auth input:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+.auth input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.auth input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(59,130,246,0.5);
+}
+
+/* ================= BUTTON ================= */
+
+.auth button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.5);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 480px) {
+  .auth {
+    padding: 20px;
+  }
+
+  .auth h2 {
+    font-size: 20px;
+  }
+
+  .auth input {
+    padding: 10px;
+  }
+
+  .auth button {
+    padding: 10px;
+  }
+}

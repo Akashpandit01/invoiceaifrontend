@@ -1,0 +1,141 @@
+/* ================= LANDING PAGE ================= */
+
+.landing {
+  height: 100vh;
+  background: radial-gradient(circle at 20% 30%, #1e3a8a, transparent 40%),
+              radial-gradient(circle at 80% 70%, #9333ea, transparent 40%),
+              linear-gradient(135deg, #020617, #0f172a, #020617);
+  background-size: 200% 200%;
+  animation: gradientMove 12s ease infinite;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* Glow effects */
+.landing::before,
+.landing::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  filter: blur(120px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.landing::before {
+  background: #3b82f6;
+  top: -150px;
+  left: -150px;
+}
+
+.landing::after {
+  background: #a855f7;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  text-align: center;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tagline {
+  margin-top: 10px;
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.5);
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.outline:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ================= ICON ================= */
+
+.icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #3b82f6;
+  filter: drop-shadow(0 0 10px rgba(59,130,246,0.6));
+}
