@@ -1,66 +1,89 @@
-📊 Invoice Extraction AI – Frontend
+INVOICE AI - FRONTEND
 
-🚀 Overview
-This is the frontend of the Invoice Extraction AI application built using React. It provides a user-friendly interface to upload invoices, view extracted data, and analyze spending insights.
+Description:
+This is a React-based frontend application for uploading, managing, and analyzing invoices using an AI-powered backend.
 
-------------------------------------------------------------
+--------------------------------------------------
 
-🌐 Live Application
+Features:
+- User Authentication (Login/Register)
+- Upload invoices (JPG, PNG, PDF)
+- Dashboard with invoice list
+- Search invoices by vendor
+- Image preview functionality
+- Analytics (total invoices & total spend)
+- Dark/Light theme toggle
+- Fully responsive design
 
-Frontend (Vercel):
-https://invoiceaifrontend-r5yq.vercel.app/
+--------------------------------------------------
 
-Backend API:
-https://invoiceaibackend.onrender.com
+Technologies Used:
+- React.js (Vite)
+- JavaScript
+- CSS (Custom styling)
+- React Router
+- React Hot Toast
 
-------------------------------------------------------------
+--------------------------------------------------
 
-✨ Features
+Project Structure:
 
-✅ Upload Invoice
-- Upload JPG/PNG invoice files
-- Sends file to backend API
+src/
+  components/
+  pages/
+    Login.jsx
+    Register.jsx
+    Dashboard.jsx
+    Landing.jsx
+  App.jsx
+  main.jsx
+  dashboard.css
 
-✅ Invoice Dashboard
-- Displays all uploaded invoices
-- Shows vendor, date, amount, and currency
+--------------------------------------------------
 
-✅ Image Preview
-- View uploaded invoice images
+Setup Instructions:
 
-✅ Delete Functionality
-- Remove invoices from database
+1. Clone the repository:
+   git clone <repo-link>
 
-✅ Analytics Dashboard
-- Total invoices
-- Total spend
-- Vendor-wise spend
-- Monthly spend trends
+2. Navigate to frontend folder:
+   cd frontend
 
-✅ UI/UX
-- Responsive design (mobile + desktop)
-- Dark mode 🌙
-- Premium dashboard layout
+3. Install dependencies:
+   npm install
 
-------------------------------------------------------------
+4. Run the project:
+   npm run dev
 
-🛠️ Tech Stack
+--------------------------------------------------
 
-- Frontend Framework: React (Vite)
-- Styling: CSS
-- API Integration: Fetch API
+API Configuration:
 
-------------------------------------------------------------
+Update API URL in code:
+const API = "http://127.0.0.1:8000";
 
-⚙️ Setup Instructions
+--------------------------------------------------
 
-npm install  
-npm run dev
+Authentication Flow:
 
-------------------------------------------------------------
+- User logs in
+- Backend returns JWT token
+- Token stored in localStorage
+- Token sent with every API request
 
-⚠️ Limitations
+Header format:
+Authorization: Bearer <token>
 
-- No authentication system
-- Depends on backend OCR accuracy
-- PDF support not included
+--------------------------------------------------
+
+Future Enhancements:
+
+- Add charts (Recharts)
+- PDF preview support
+- Download invoices
+- Advanced analytics
+
+--------------------------------------------------
+
+Author:
+Akash Pandit
